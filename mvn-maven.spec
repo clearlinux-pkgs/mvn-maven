@@ -4,7 +4,7 @@
 #
 Name     : mvn-maven
 Version  : 2.2.0
-Release  : 6
+Release  : 7
 URL      : https://github.com/apache/maven/archive/maven-2.2.0.tar.gz
 Source0  : https://github.com/apache/maven/archive/maven-2.2.0.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/apache/maven/maven/2.0.1/maven-2.0.1.pom
@@ -28,12 +28,14 @@ Source18  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.0/maven-3.0.
 Source19  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.3.9/maven-3.3.9.pom
 Source20  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.6.0/maven-3.6.0.pom
 Source21  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.6.1/maven-3.6.1.pom
+Source22  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.6.1/maven-3.6.1.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: mvn-maven-data = %{version}-%{release}
 Requires: mvn-maven-license = %{version}-%{release}
 BuildRequires : apache-ant
+BuildRequires : apache-maven
 BuildRequires : buildreq-mvn
 
 %description
@@ -128,6 +130,9 @@ cp %{SOURCE20} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.1
 cp %{SOURCE21} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.1/maven-3.6.1.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.1
+cp %{SOURCE22} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.1/maven-3.6.1.pom
 
 
 %files

@@ -1,4 +1,7 @@
 # This file contains recursive sources that require this package
+apache-flink
 apache-hadoop
 apache-maven
 apache-spark
+gradle
+rabbitmq-java-client
