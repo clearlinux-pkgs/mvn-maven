@@ -4,7 +4,7 @@
 #
 Name     : mvn-maven
 Version  : 2.2.0
-Release  : 7
+Release  : 8
 URL      : https://github.com/apache/maven/archive/maven-2.2.0.tar.gz
 Source0  : https://github.com/apache/maven/archive/maven-2.2.0.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/apache/maven/maven/2.0.1/maven-2.0.1.pom
@@ -26,9 +26,8 @@ Source16  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.0.4/maven-3.
 Source17  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.0.5/maven-3.0.5.pom
 Source18  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.0/maven-3.0.pom
 Source19  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.3.9/maven-3.3.9.pom
-Source20  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.6.0/maven-3.6.0.pom
+Source20  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.6.1/maven-3.6.1.pom
 Source21  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.6.1/maven-3.6.1.pom
-Source22  : https://repo1.maven.org/maven2/org/apache/maven/maven/3.6.1/maven-3.6.1.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -68,6 +67,7 @@ license components for the mvn-maven package.
 mkdir -p %{buildroot}/usr/share/package-licenses/mvn-maven
 cp apache-maven/LICENSE.txt %{buildroot}/usr/share/package-licenses/mvn-maven/apache-maven_LICENSE.txt
 cp maven-core/checkstyle-license.txt %{buildroot}/usr/share/package-licenses/mvn-maven/maven-core_checkstyle-license.txt
+cp maven-model/src/test/java/org/apache/maven/model/LicenseTest.java %{buildroot}/usr/share/package-licenses/mvn-maven/maven-model_src_test_java_org_apache_maven_model_LicenseTest.java
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/2.0.1
 cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/2.0.1/maven-2.0.1.pom
 
@@ -125,14 +125,11 @@ cp %{SOURCE18} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.3.9
 cp %{SOURCE19} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.3.9/maven-3.3.9.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.0
-cp %{SOURCE20} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.0/maven-3.6.0.pom
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.1
+cp %{SOURCE20} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.1/maven-3.6.1.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.1
 cp %{SOURCE21} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.1/maven-3.6.1.pom
-
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.1
-cp %{SOURCE22} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.1/maven-3.6.1.pom
 
 
 %files
@@ -159,10 +156,10 @@ cp %{SOURCE22} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven
 /usr/share/java/.m2/repository/org/apache/maven/maven/3.0.5/maven-3.0.5.pom
 /usr/share/java/.m2/repository/org/apache/maven/maven/3.0/maven-3.0.pom
 /usr/share/java/.m2/repository/org/apache/maven/maven/3.3.9/maven-3.3.9.pom
-/usr/share/java/.m2/repository/org/apache/maven/maven/3.6.0/maven-3.6.0.pom
 /usr/share/java/.m2/repository/org/apache/maven/maven/3.6.1/maven-3.6.1.pom
 
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/mvn-maven/apache-maven_LICENSE.txt
 /usr/share/package-licenses/mvn-maven/maven-core_checkstyle-license.txt
+/usr/share/package-licenses/mvn-maven/maven-model_src_test_java_org_apache_maven_model_LicenseTest.java
